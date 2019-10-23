@@ -64,6 +64,7 @@ exports.handler = function(event, _context, callback) {
                 Body: result,
                 Bucket: BUCKET,
                 ContentType: contentType,
+		CacheControl: 'max-age=31536000',
                 Key: path
             }).promise()
         )
